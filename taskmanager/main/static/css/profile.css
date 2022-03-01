@@ -1,0 +1,35 @@
+.button {
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.button_click {
+    text-decoration: none;
+    color: white;
+    font-size: 35px;
+    border: 2px solid #e34761;
+    background: #f20044;
+    padding: 5px 20px;
+    box-shadow: 0px 0px 90px #f20044;
+}
+.button_click:hover {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes button_click{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+}
+
+
+

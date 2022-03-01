@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% block active_parsing %}
+active
+{% endblock %}
+
+{% block title %}
+Парсинг серверов McOnly
+{% endblock %}
+
+
+{% block name_profile %}
+{{ name }}
+{% endblock %}
+
+{% block style %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_parsing.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="buttons">
+    <a class="mini_button" href="{% url 'Найти' %}">Найти игрока<br>на<br> серверах</a>
+    <a class="mini_button" href="{% url 'OnlineAllServers' %}">Узнать<br>список онлайна<br>на<br>сервере</a>
+    <a class="mini_button" href="{% url 'Онлайн игрока' %}">Узнать онлайн<br>игрока<br>на<br>сервере(ах)</a>
+</div>
+{% endblock %}
+
+
+

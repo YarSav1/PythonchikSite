@@ -1,0 +1,66 @@
+{% extends 'main/base.html' %}
+{% block active_parsing %}
+active
+{% endblock %}
+
+
+{% block style %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_parsing.css' %}">
+{% endblock %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block name_profile %}
+{{ name }}
+{% endblock %}
+
+{% block content %}
+<div class="table_me">
+    Игроки:
+    <div class="all_players_div">
+        {% for x in players %}
+            <a class="btn_player" href="{% url 'Онлайн игрока' %}">{{x}}</a>
+        {% endfor %}
+    </div>
+
+<br>
+<div class="mdrs">
+    Модеры:
+    {% for x in moders %}
+        <a class="btn_player" href="{% url 'Онлайн игрока' %}">{{x}}</a>
+    {% endfor %}
+</div>
+<br>
+<div class="hdrs">
+    ХедМодеры:
+    {% for x in headmoders %}
+        <a class="btn_player" href="{% url 'Онлайн игрока' %}">{{x}}</a>
+    {% endfor %}
+</div>
+<br>
+<div class="hlprs">
+    Хелперы:
+    {% for x in helpers %}
+        <a class="btn_player" href="{% url 'Онлайн игрока' %}">{{x}}</a>
+    {% endfor %}
+</div>
+<br>
+<div class="crrs">
+    Кураторы:
+    {% for x in curator %}
+        <a class="btn_player" href="{% url 'Онлайн игрока' %}">{{x}}</a>
+    {% endfor %}
+</div>
+<br>
+<div class="number_online">
+    Общий онлайн: {{all_online}}
+</div>
+<br>
+</div>
+{% endblock %}
+
+

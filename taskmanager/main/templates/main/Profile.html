@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+{% block active_profile %}
+active
+{% endblock %}
+
+
+{% block style %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
+{% endblock %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+{% block name_profile %}
+{{ name }}
+{% endblock %}
+
+{% block content %}
+{%if name == 'Профиль' %}
+    <div class="button">
+        <div class="button_click_form">
+            <a class='button_click' href=https://discord.com/api/oauth2/authorize?client_id=769936189808967762&redirect_uri=http%3A%2F%2F127.0.0.1%3A8000%2Fprofile&response_type=code&scope=identify%20guilds>Авторизоваться(в разработке)</a>
+        </div>
+    </div>
+{% endif %}
+{%if name != 'Профиль' %}
+    Вы авторизованы!
+{% endif %}
+
+
+
+{% endblock %}
+
+

@@ -1,0 +1,31 @@
+{% extends 'main/base.html' %}
+{% block active_parsing %}
+active
+{% endblock %}
+
+{% block title %}
+Парсинг серверов McOnly
+{% endblock %}
+
+
+{% block name_profile %}
+{{ name }}
+{% endblock %}
+
+{% block style %}
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/style_parsing.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<div class="main_btn">
+    {% for x in servers %}
+            <a type="submit" href="{% url 'OnlineOneServer' %}?{{x}}"  class="btn_">{{x}}</a>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
+
